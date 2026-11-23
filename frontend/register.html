@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Create an account — AMIPerfumeHub</title>
+  <link rel="stylesheet" href="/static/assets/css/style.css">
+  <link rel="stylesheet" href="/static/assets/css/forms.css">
+  <script defer src="/static/js/app.js?v=admin-login-fix-3"></script>
+</head>
+<body data-page="register">
+  <div id="site-header"></div>
+  <main class="container">
+    <section class="form-card">
+      <span class="eyebrow">Join the marketplace</span>
+      <h1>Create your account</h1>
+      <div class="notice" data-notice hidden></div>
+      <form id="register-form" class="form-grid">
+        <label>Full name<input name="full_name" minlength="2" maxlength="100" autocomplete="name" required></label>
+        <label>Email address<input type="email" name="email" autocomplete="email" required></label>
+        <label>Password<div class="password-control"><input id="register-password" type="password" name="password" minlength="8" maxlength="128" autocomplete="new-password" required><button class="password-toggle" type="button" data-password-toggle="register-password">Show</button></div></label>
+        <label>Confirm password<div class="password-control"><input id="confirm-password" type="password" name="confirm_password" minlength="8" autocomplete="new-password" required><button class="password-toggle" type="button" data-password-toggle="confirm-password">Show</button></div></label>
+        <button>Create account</button>
+      </form>
+      <p class="muted">Already registered? <a href="/static/login.html">Log in</a></p>
+      <p class="muted">Administrator? <a href="/admin/login">Admin sign in</a></p>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+</body>
+</html>
