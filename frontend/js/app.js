@@ -204,6 +204,9 @@ async function adminPage() {
 }
 
 document.addEventListener("DOMContentLoaded",async()=>{
+  if ("serviceWorker" in navigator && location.protocol !== "file:") {
+    navigator.serviceWorker.register("/sw.js").catch(() => {});
+  }
   await setupHeader(); footer();
   const page=document.body.dataset.page;
   document.querySelectorAll("[data-password-toggle]").forEach(button=>button.addEventListener("click",()=>{const input=document.getElementById(button.dataset.passwordToggle);input.type=input.type==="password"?"text":"password";button.textContent=input.type==="password"?"Show":"Hide";}));

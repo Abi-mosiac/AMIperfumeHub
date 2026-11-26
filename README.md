@@ -41,6 +41,20 @@ AMIPerfumeHub is a multi-vendor perfume marketplace for customers and approved v
 
    Open `http://127.0.0.1:8000`. API documentation is available at `/docs`.
 
+   To open the app on a phone connected to the same Wi-Fi, start Uvicorn on
+   your computer's network interface and use that computer's local IP address:
+
+   ```bash
+   uvicorn app.main:app --host 0.0.0.0 --port 8000
+   ```
+
+   Then visit `http://<computer-local-IP>:8000` on the phone (for example,
+   `http://192.168.1.20:8000`). Allow inbound port 8000 on the computer's
+   firewall if needed. For installing the app from a public address, deploy
+   behind HTTPS; browsers require a secure connection for service workers and
+   app installation. On supported browsers, use **Install app** or **Add to
+   Home Screen** from the browser menu.
+
 ## Run with Docker Compose
 
 Copy `.env.example` to `.env`, replace both passwords/secrets, then start the app and PostgreSQL:

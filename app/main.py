@@ -55,6 +55,15 @@ def home():
     return FileResponse(FRONTEND_DIR / "index.html")
 
 
+@app.get("/sw.js", include_in_schema=False)
+def service_worker():
+    return FileResponse(
+        FRONTEND_DIR / "sw.js",
+        media_type="application/javascript",
+        headers={"Service-Worker-Allowed": "/"},
+    )
+
+
 @app.get("/admin", include_in_schema=False)
 def admin_page():
     return FileResponse(FRONTEND_DIR / "admin" / "dashboard.html")

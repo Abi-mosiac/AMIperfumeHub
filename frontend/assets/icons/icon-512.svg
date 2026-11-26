@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="104" fill="#403127"/>
+  <path d="M186 163h140v46h27v220H159V209h27z" fill="#f7f3ec"/>
+  <path d="M216 117h80v46h-80z" fill="#b98946"/>
+  <path d="M184 256h144v112H184z" fill="#b98946"/>
+  <text x="256" y="333" text-anchor="middle" font-family="Georgia,serif" font-size="82" fill="#fffdfa">AMÍ</text>
+</svg>
